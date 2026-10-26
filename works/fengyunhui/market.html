@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>风云汇 · 行情核验</title>
+<link rel="stylesheet" href="proto.css?v=1">
+</head>
+<body>
+<div class="shell" id="shell" data-page="market" data-title="行情核验" data-sub="未配置授权供应商 = 不伪造行情">
+<main class="wrap">
+
+  <div class="panel">
+    <div class="panel-head">行情事实层状态<span class="p-sub">v0.7 · 可替换行情适配层</span><span class="demo-tag">演示数据</span></div>
+    <div class="panel-body">
+      <div class="empty-card">
+        <div class="e-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-6 3 3 5-8"/></svg></div>
+        <div class="e-why">行情当前<b>不可用</b>——尚未配置授权供应商密钥（<span class="num">configured=false</span>）。</div>
+        <div class="e-how">我们不会用模拟数据冒充行情。配置已授权的 HTTPS 供应商后，日线与实时核验自动启用。</div>
+      </div>
+      <div class="muted mt-2">示例导入命令（配置后）：<span class="num" style="font-size:11.5px">python market_provider.py 600000 --start 20260101 --end 20260912</span></div>
+    </div>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">核验状态口径<span class="p-sub">新闻里的涨跌描述，逐条带核验状态展示</span></div>
+    <div class="panel-body">
+      <div class="bound-row"><span class="tag ok">已核验</span><div class="b-main"><div class="b-title">描述与行情事实一致</div><div class="b-sub">如"收盘上涨 3.2%"与日线核对一致</div></div></div>
+      <div class="bound-row"><span class="tag warn">部分核验</span><div class="b-main"><div class="b-title">仅部分数据可核对</div><div class="b-sub">如盘中表述只有收盘数据可比</div></div></div>
+      <div class="bound-row"><span class="tag bad">矛盾</span><div class="b-main"><div class="b-title">描述与事实不一致</div><div class="b-sub">如下例——保留两种信息，不替你裁决</div></div></div>
+      <div class="bound-row"><span class="tag fade">不可用</span><div class="b-main"><div class="b-title">无对应行情数据</div><div class="b-sub">未上市标的、停牌等</div></div></div>
+      <div class="bound-row"><span class="tag warn">待验证</span><div class="b-main"><div class="b-title">行情层尚未覆盖</div><div class="b-sub">供应商配置前的默认状态</div></div></div>
+    </div>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">示例 · 一条"矛盾"新闻的样子</div>
+    <div class="panel-body">
+      <div class="ev-row">
+        <span class="ev-time">10-24</span>
+        <div class="ev-main">
+          <div class="ev-title">某媒体报道"XX 股今日大涨" —— 行情显示：当日持平</div>
+          <div class="ev-meta"><span class="tag bad">矛盾</span><span>新闻描述 vs 行情事实并列展示</span><span class="src-link" data-quote="qm-1">行情事实 →</span></div>
+          <div class="quote-card" id="qm-1"><div class="q-text">行情事实表：2026-10-24，收盘 ±0.0%，振幅 1.2%（来源：已核验日线）。</div><div class="q-meta"><span>写入 data/market.db</span><span class="tag ok">已核验</span></div></div>
+        </div>
+      </div>
+      <div class="muted mt-1">矛盾不自动判定谁对——新闻与行情各自留证，回查权在你。</div>
+    </div>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">星级规则<i class="ib" data-tip="真实 MVP 的红星/绿星计算器口径：星级表示基本面影响强度，不是上涨概率。"></i></div>
+    <div class="panel-body">
+      <div class="ledger-strip">
+        <span class="l-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--gold)"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56L12 2z"/></svg></span>
+        <span><b>红星 / 绿星 = 基本面影响强度（0–5），不是上涨概率。</b>
+          <span class="l-meta">计算器已独立实现；证券主数据、行情事实与人工复核完成前，不会自动给线上新闻加星</span></span>
+      </div>
+      <div class="ledger-strip">
+        <span class="l-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        <span><b>下一步（真实迭代计划）：</b>人工复核与标注 → 跨来源事件聚类 → 证券主数据与授权行情验证。
+          <span class="l-meta">不是直接让模型猜涨跌——路线图的顺序本身就是设计</span></span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footnote">
+    <b>行情核验</b> = 真实 MVP「v0.7 行情事实层」复刻 + C 端化（configured=false 的诚实空态、五种核验状态口径、矛盾并列不裁决、星级≠涨跌概率）· 演示数据 · <b>不构成投资建议</b>。
+  </footer>
+</main>
+</div>
+<script src="proto.js?v=1"></script>
+</body>
+</html>

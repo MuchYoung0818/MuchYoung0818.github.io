@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>念念 · 我的</title>
+<link rel="stylesheet" href="proto.css?v=5">
+</head>
+<body>
+<div class="shell" id="shell" data-page="profile" data-title="我的" data-sub="离开的自由与留下的理由同屏">
+<main class="wrap">
+
+  <div class="panel">
+    <div class="panel-body" style="display:flex;align-items:center;gap:13px">
+      <div style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#241a12;font-weight:700;font-size:17px">鱼</div>
+      <div style="flex:1">
+        <div style="font-weight:650">小鱼 <span class="muted">· 已陪伴 42 天</span></div>
+        <div class="muted">记忆库：18 条（12 已确认 / 3 待确认 / 2 褪色 / 1 冲突）<span class="demo-tag">演示数据</span></div>
+      </div>
+      <button class="btn btn-ghost btn-sm" type="button">编辑</button>
+    </div>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">记忆主权</div>
+    <div class="panel-body">
+      <div class="bound-row">
+        <div class="b-main">
+          <div class="b-title">暂停记忆</div>
+          <div class="b-sub">暂停 ≠ 删除——对话照常进行，召回区会如实显示"记忆已暂停"，不会假装记得</div>
+        </div>
+        <label class="switch"><input type="checkbox"><span class="sl"></span></label>
+      </div>
+      <div class="bound-row">
+        <div class="b-main">
+          <div class="b-title">导出全部记忆</div>
+          <div class="b-sub">含内容、来源索引、置信档、修正历史的完整档案</div>
+        </div>
+        <button class="btn btn-sm" type="button">导出</button>
+      </div>
+      <div class="mt-1" style="background:var(--bg-3);border:1px solid var(--line);border-radius:9px;padding:11px 13px;font-family:var(--mono);font-size:11.5px;color:var(--ink-2);line-height:1.8;overflow-x:auto">nianian_export_2026-10-26.json<br>{ "memories": 18, "with_sources": true, "format": [<br>&nbsp;&nbsp;"content", "state", "days_since_confirmed", "sources[]", "ledger[]" ] }</div>
+      <div class="bound-row">
+        <div class="b-main">
+          <div class="b-title" style="color:var(--bad)">删除全部记忆</div>
+          <div class="b-sub">双重确认 · 承诺 24 小时内全链路生效（含召回、关怀计划依据、备份索引）</div>
+        </div>
+        <button class="btn btn-danger btn-sm" type="button">删除</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">念念的三条承诺<span class="p-sub">与开启记忆时的说明一一呼应</span></div>
+    <div class="panel-body">
+      <div class="bar-row"><div class="b-label"><b>不用于广告推荐</b>——记忆只有一个用途：让对话更连贯</div></div>
+      <div class="bar-row"><div class="b-label"><b>不出售、不共享给第三方</b>——导出文件只进你自己的设备</div></div>
+      <div class="bar-row"><div class="b-label"><b>删除 24 小时内全链路生效</b>——对比行业"删除后仍可能被参考一段时间"</div></div>
+    </div>
+  </div>
+
+  <div class="muted mt-3">原型说明：本页为设计演示，开关与按钮不产生真实数据操作。</div>
+
+  <footer class="footnote">
+    <b>M9 我的与数据主权</b> = 竞品「设置-记忆开关/删除」复刻 + L2 增强（暂停≠删除的状态澄清、带来源索引的导出、24h 生效承诺、承诺闭环）· PRD §M9 · 演示数据。
+  </footer>
+</main>
+</div>
+<script src="proto.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>森森 CoSense · Agent 持续改进平台架构 — 案例页</title>
+<meta name="description" content="给 AI Agent 装质量飞轮：失败聚类→因果归因→受控实验→证据晋升的完整架构设计（85 节 Source of Truth 文档）。">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap bar">
+    <a class="brandmark" href="index.html"><span class="bm">M</span><span>Muchyoung<span style="font-weight:400;color:var(--ink-3);font-size:12px;margin-left:6px">作品集</span></span></a>
+    <nav class="site-nav"><a href="index.html#works">← 返回作品</a></nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="case-hero">
+    <div class="cat"><span class="tag">架构设计</span><span class="tag">Agent 质量工程</span><span class="tag">Source of Truth 文档</span></div>
+    <h1>森森 CoSense — Agent 持续改进平台架构</h1>
+    <p class="one">当 AI Agent 越来越能干，谁来保证它<b style="color:var(--ink)">越改越好而不是越改越坏</b>？CoSense 是我给出的答案：一条从失败发现到安全晋升的质量飞轮，85 节架构文档定义了每个对象的数据模型、状态机与验收标准。</p>
+    <div class="meta-grid">
+      <div class="meta-cell"><div class="k">角色</div><div class="v">架构设计 + 关键模块原型验证</div></div>
+      <div class="meta-cell"><div class="k">产出</div><div class="v">v1.0 架构文档（P0–P3 路线）</div></div>
+      <div class="meta-cell"><div class="k">验证</div><div class="v">意图识别 / 记忆召回 / badcase 回归</div></div>
+      <div class="meta-cell"><div class="k">复用</div><div class="v">念念的记忆架构直接取材于此</div></div>
+    </div>
+    <div class="case-actions">
+      <a class="btn btn-primary" href="docs/sensen-CoSense自进化框架.md">下载完整架构文档（.md）</a>
+      <a class="btn btn-ghost" href="case-nianian.html">看它如何变成 C 端产品（念念）</a>
+    </div>
+  </div>
+
+  <div class="case-sec">
+    <h2><span class="no">01</span>核心闭环：从失败到安全晋升</h2>
+    <div class="flow">
+      <span class="f-node">FailureCase</span><span class="f-arrow">→</span>
+      <span class="f-node">FailureCluster</span><span class="f-arrow">→</span>
+      <span class="f-node">TriggerDecision</span><span class="f-arrow">→</span>
+      <span class="f-node">Attribution 归因</span><span class="f-arrow">→</span>
+      <span class="f-node">Diagnostic Replay</span><span class="f-arrow">→</span>
+      <span class="f-node">OptimizationJob</span><span class="f-arrow">→</span>
+      <span class="f-node">Candidate</span><span class="f-arrow">→</span>
+      <span class="f-node">EvaluationRun</span><span class="f-arrow">→</span>
+      <span class="f-node">Promotion 人工门控</span><span class="f-arrow">→</span>
+      <span class="f-node">新 Baseline</span>
+    </div>
+    <p class="lead" style="margin-top:16px">每个环节都有明确的数据模型与状态机：失败案例先聚类成"问题"才允许触发优化；LLM 给出的原因只是"假设"，经 Diagnostic Replay 因果验证后才能升级为 VALIDATED；候选改动必须同时通过目标集 / 回归集 / 保留集三层评测 + 人工批准，才允许晋升。</p>
+  </div>
+
+  <div class="case-sec">
+    <h2><span class="no">02</span>四条设计原则（面试可展开的细节）</h2>
+    <div class="tbl-scroll"><table class="mini-table">
+      <tr><th>原则</th><th>含义</th><th>为什么重要</th></tr>
+      <tr><td>Case 是证据，Cluster 才是问题</td><td>禁止单次失败直接触发优化</td><td>避免为偶发 case 付出系统性成本</td></tr>
+      <tr><td>Traceability ≠ Attribution</td><td>Trace 只回答"发生了什么"，归因才回答"为什么"</td><td>LLM 的解释必须经干预实验验证</td></tr>
+      <tr><td>Optimizer / Evaluator / Promoter 三权分立</td><td>生成者不得自行评测、不得自行发布</td><td>防止自我改进失控</td></tr>
+      <tr><td>数据集三分隔离</td><td>优化集 / 回归集 / 保留集严格分离</td><td>保留集不可见，防止"为评测而优化"</td></tr>
+    </table></div>
+  </div>
+
+  <div class="case-sec">
+    <h2><span class="no">03</span>与念念的关系：架构到体验的一次落地</h2>
+    <p class="lead">念念案例里的"八模块记忆分组、时间衰减打分、先确认后入库"，正是 CoSense 记忆与质量纪律在 C 端的翻译——<b style="color:var(--ink)">同一个内核，两种产品形态。</b>这也是我对自己作品集的定位：架构思维不悬空，体验设计有根。</p>
+  </div>
+
+  <div class="pn-row">
+    <a class="btn btn-ghost" href="case-fengyunhui.html">← 风云汇 · 真实项目</a>
+    <a class="btn btn-primary" href="docs/sensen-CoSense自进化框架.md">下载文档 →</a>
+    <a class="btn btn-ghost" href="case-nianian.html">念念案例 →</a>
+  </div>
+
+</div>
+</main>
+
+<footer class="site-foot"><div class="wrap f-grid">
+  <p>Muchyoung · AI 产品设计作品集 · 架构文档状态如实标注：设计完整，部分模块原型验证</p>
+  <p><a href="index.html">← 返回主页</a></p>
+</div></footer>
+
+</body>
+</html>

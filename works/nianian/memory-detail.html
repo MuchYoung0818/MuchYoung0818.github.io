@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>念念 · 记忆详情</title>
+<link rel="stylesheet" href="proto.css?v=5">
+</head>
+<body>
+<div class="shell" id="shell" data-page="memory" data-title="记忆详情" data-sub="一条记忆的完整生命周期">
+<main class="wrap">
+
+  <div class="panel">
+    <div class="panel-head">
+      偏好喜好 · 早餐喝燕麦拿铁
+      <span class="tag ok">已确认<i class="ib" data-tip="口径：你于 10月20日 在复核队列采纳；此后 10月24日 对话中再次出现并匹配。"></i></span>
+      <span class="tag brand">⭐ 已置顶</span>
+      <span class="demo-tag" style="margin-left:auto">演示数据</span>
+    </div>
+    <div class="panel-body">
+      <div class="kv">
+        <span class="k">距上次确认</span><span class="v"><span class="mem-days">6 天</span><span class="muted">（10月24日你在对话中确认）</span></span>
+        <span class="k">口径阶梯</span><span class="v">观察 4 次 · 确认 2 次 · 来源对话 3 段</span>
+        <span class="k">首次记录</span><span class="v num">2026-09-30</span>
+        <span class="k">当前状态</span><span class="v">有效引用中 · 置顶后永不褪色、不被淘汰</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">来源时间线<span class="p-sub">每一次"它记得"，都能翻出原话</span></div>
+    <div class="panel-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">2026-10-24 · 对话《跑步与近况》</div>
+          <div>"还是早上那杯燕麦拿铁，跑完步喝着舒服。"<span class="src-link" data-quote="qd-3"> 原文 →</span></div>
+          <div class="quote-card" id="qd-3"><div class="q-text">"还是早上那杯燕麦拿铁，跑完步喝着舒服。已经习惯这个节奏了。"</div><div class="q-meta"><span class="num">2026-10-24</span><span class="tag ok">已确认</span><span>第 4 次观察</span></div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2026-10-14 · 对话《降温与早餐》</div>
+          <div>"最近早上都喝燕麦拿铁了，比奶茶健康点。"<span class="src-link" data-quote="qd-2"> 原文 →</span></div>
+          <div class="quote-card" id="qd-2"><div class="q-text">"最近早上都喝燕麦拿铁了，比奶茶健康点。"</div><div class="q-meta"><span class="num">2026-10-14</span><span class="tag ok">已确认</span><span>第 3 次观察</span></div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2026-09-30 · 对话《想戒奶茶》</div>
+          <div>"想找点健康的东西替代奶茶当早餐。"<span class="src-link" data-quote="qd-1"> 原文 →</span></div>
+          <div class="quote-card" id="qd-1"><div class="q-text">"想找点健康的东西替代奶茶当早餐，最好方便带的那种。"</div><div class="q-meta"><span class="num">2026-09-30</span><span class="tag warn">首次提炼</span><span>第 1 次观察</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">修正历史<span class="p-sub">账本不删历史——复核意见与原文分开存</span></div>
+    <div class="panel-body">
+      <div class="ledger-strip">
+        <span class="l-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span>
+        <span><b>10月02日 · 你手动修正</b>：内容从"想戒奶茶"修正为"早餐喝燕麦拿铁"
+          <span class="l-meta">修正发生在复核队列；原始提炼与修正稿都保留，可追溯（回应竞品"记忆静默变更"）</span></span>
+      </div>
+      <div class="ledger-strip">
+        <span class="l-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5z"/><path d="M3 7l9 5 9-5"/><path d="M12 12v10"/></svg></span>
+        <span><b>10月20日 · 你在复核队列采纳</b>：状态由"待确认"→"已确认"
+          <span class="l-meta">采纳前 AI 仅以"好像提过"句式引用；采纳后可作确定事实使用</span></span>
+      </div>
+      <div class="ledger-strip">
+        <span class="l-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56L12 2z"/></svg></span>
+        <span><b>10月24日 · 你置顶</b>：该记忆永不褪色、不被淘汰
+          <span class="l-meta">置顶是你对抗自动淘汰的显式手段——淘汰规则可见，而非黑箱 FIFO</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row fixed mt-3">
+    <button class="btn" type="button" style="flex:1">修正内容</button>
+    <button class="btn" type="button" style="flex:1">取消置顶</button>
+    <button class="btn btn-danger" type="button" style="flex:1">删除这条记忆</button>
+  </div>
+  <div class="muted mt-1">删除需二次确认；删除后 24 小时内全链路停止引用（对比竞品"删除后仍可能被参考一段时间"）。</div>
+
+  <footer class="footnote">
+    <b>M5 记忆详情</b> = 竞品「ChatGPT 记忆条目」复刻 + L2 增强（来源时间线逐段可回查原话、修正历史账本、置顶不过期、删除生效承诺）· PRD §M5 · 演示数据。
+  </footer>
+</main>
+</div>
+<script src="proto.js?v=2"></script>
+</body>
+</html>

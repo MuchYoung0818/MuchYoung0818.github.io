@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>风云汇 · 复核中心</title>
+<link rel="stylesheet" href="proto.css?v=1">
+</head>
+<body>
+<div class="shell" id="shell" data-page="review" data-title="复核中心" data-sub="人工意见不修改模型原文">
+<main class="wrap">
+
+  <div class="row" style="align-items:center;justify-content:space-between">
+    <span style="font-size:16px;font-weight:650">待复核 <span class="gold-num">4</span> 条</span>
+    <span class="demo-tag">演示数据</span>
+  </div>
+
+  <div class="review-card mt-2">
+    <div class="rv-title">氢能 · 子事件 1：电堆功率密度提升（利好 · 中长期）</div>
+    <div class="rv-quote">模型依据："新一代电堆体积功率密度较上一代提升约 30%……"（财联社 10-26）+ 公告量产表述（09-30）</div>
+    <div class="mt-1"><span class="tag ok">引文校验通过</span><span class="tag warn">待复核</span></div>
+    <div class="rv-actions">
+      <button class="btn btn-primary btn-sm" type="button">采纳</button>
+      <button class="btn btn-ghost btn-sm" type="button">驳回 · 填写备注</button>
+      <a class="btn btn-sm" href="event.html">查看完整拆解</a>
+    </div>
+  </div>
+
+  <div class="review-card">
+    <div class="rv-title">氢能 · 子事件 2：量产时点为"计划"表述（中性）</div>
+    <div class="rv-quote">模型依据："配套车型计划于 2027 年上半年量产，具体节奏以正式公告为准。"</div>
+    <div class="mt-1"><span class="tag ok">引文校验通过</span></div>
+    <div class="rv-actions">
+      <button class="btn btn-primary btn-sm" type="button">采纳</button>
+      <button class="btn btn-ghost btn-sm" type="button">驳回 · 填写备注</button>
+    </div>
+  </div>
+
+  <div class="review-card rv-failed">
+    <div class="rv-title">存储芯片 · 子事件 2：某供应商"涨价函"影响（未发布）</div>
+    <div class="rv-quote" style="border-left-color:var(--bad)">校验失败：第 2 条引文与原文不一致（错引）——<b>本条不发布，也不自动付费重试</b>。</div>
+    <div class="mt-1"><span class="tag bad">错引 · 已拦截</span><span class="tag fade">上次成功报告仍保留</span></div>
+    <div class="rv-actions">
+      <button class="btn btn-sm" type="button">查看失败原因</button>
+      <button class="btn btn-ghost btn-sm" type="button">修正证据后重新生成</button>
+    </div>
+  </div>
+
+  <div class="review-card">
+    <div class="rv-title">创新药 · 子事件 1：集采结果好于预期（利好 · 短期）</div>
+    <div class="rv-quote">模型依据：拟中选结果公示 + 机构解读两篇</div>
+    <div class="mt-1"><span class="tag ok">引文校验通过</span><span class="tag fade">证据已修订 · 旧报告退出统计</span></div>
+    <div class="rv-actions">
+      <button class="btn btn-primary btn-sm" type="button">采纳</button>
+      <button class="btn btn-ghost btn-sm" type="button">驳回 · 填写备注</button>
+    </div>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">复核记录（账本）<span class="p-sub">驳回可追溯，不删除</span></div>
+    <div class="panel-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">10-24 16:02 · 采纳</div>
+          <div>"加氢站补贴细则"利好线索采纳。备注：政策链条完整，纳入统计。</div>
+        </div>
+        <div class="tl-item tl-bad">
+          <div class="tl-date">10-22 09:41 · 驳回</div>
+          <div>"某公司进军氢能"拆解驳回。备注：新闻仅一句意向表述，证据不足；报告退出当前方向统计，仍可回查。</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">10-18 11:15 · 采纳（修订）</div>
+          <div>存储芯片需求线索采纳，同时修正期限判断：短期 → 中长期。</div>
+        </div>
+      </div>
+      <div class="ledger-strip mt-1">
+        <span class="l-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
+        <span>证据修订后，旧报告自动<b>退出当前方向统计</b>，但原文与历史版本保留可追溯。
+          <span class="l-meta">当前采纳率口径：已采纳 / (已采纳+已驳回) = 9/12<i class="ib" data-tip="口径：不含校验失败与待复核样本。"></i></span></span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footnote">
+    <b>复核中心</b> = 真实 MVP「采纳/驳回 + 复核备注 + 错引不发布 + 证据修订退出统计」复刻 + C 端化（校验失败可见但不惊吓、复核账本时间线、采纳率口径角标）· 演示数据 · <b>不构成投资建议</b>。
+  </footer>
+</main>
+</div>
+<script src="proto.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>风云汇 · 自选</title>
+<link rel="stylesheet" href="proto.css?v=1">
+</head>
+<body>
+<div class="shell" id="shell" data-page="watch" data-title="自选板块" data-sub="正负不抵消 · 不代表涨跌概率">
+<main class="wrap">
+
+  <div class="panel">
+    <div class="panel-head">我的自选<span class="p-sub">长按卡片可移除 · 演示数据</span></div>
+    <div class="panel-body">
+      <div class="row">
+        <span class="tag brand" style="font-size:13.5px;padding:5px 14px">氢能 ×</span>
+        <span class="tag brand" style="font-size:13.5px;padding:5px 14px">存储芯片 ×</span>
+        <span class="tag brand" style="font-size:13.5px;padding:5px 14px">创新药 ×</span>
+        <span class="tag" style="font-size:13.5px;padding:5px 14px;color:var(--ink-3)">+ 添加板块</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">
+      氢能 · 已分析样本线索
+      <span class="tag warn">待复核样本参与中</span>
+      <i class="ib" data-tip="口径：仅统计"已拆解且引文校验通过"的样本；人工驳回的报告退出当前统计，但仍可追溯。正负条目不抵消，也不换算成涨跌概率。"></i>
+    </div>
+    <div class="panel-body">
+      <div class="clue-row">
+        <span class="tag up">正线索</span>
+        <div class="c-body">
+          <div class="c-text">电堆功率密度提升 30%，若量产验证将改善成本曲线</div>
+          <div class="c-meta"><span class="num">10-26</span><span class="tag warn">待复核</span><span class="src-link" data-quote="qw-1">最近贡献事件 →</span></div>
+          <div class="quote-card" id="qw-1"><div class="q-text">"新一代电堆体积功率密度较上一代提升约 30%……"</div><div class="q-meta"><span class="num">2026-10-26</span><span>财联社</span><span class="tag ok">引文匹配</span></div></div>
+        </div>
+      </div>
+      <div class="clue-row">
+        <span class="tag up">正线索</span>
+        <div class="c-body">
+          <div class="c-text">地方补贴细则落地，加氢站建设提速</div>
+          <div class="c-meta"><span class="num">10-18</span><span class="tag ok">已采纳</span><span class="muted">复核备注：政策链条完整</span></div>
+        </div>
+      </div>
+      <div class="clue-row">
+        <span class="tag down">负线索</span>
+        <div class="c-body">
+          <div class="c-text">某头部客户招标延期，短期订单能见度下降</div>
+          <div class="c-meta"><span class="num">10-22</span><span class="tag ok">已采纳</span></div>
+        </div>
+      </div>
+      <div class="warn-strip">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        <span>正负条目<b>不相互抵消</b>，也不代表涨跌概率——它们只是"已分析样本里的信号"，样本量小的时候请不要当结论用。</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">主题映射状态<i class="ib" data-tip="主题可由规则或模型提出，尚非权威行业指数；未映射主题说明当前规则没有对应分类。"></i></div>
+    <div class="panel-body">
+      <div class="row">
+        <span class="tag ok">氢能 · 已映射</span>
+        <span class="tag ok">存储芯片 · 已映射</span>
+        <span class="tag ok">创新药 · 已映射</span>
+        <span class="tag ok">消费电子 · 已映射</span>
+      </div>
+      <div class="empty-card mt-2">
+        <div class="e-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5z"/><path d="M3 7l9 5 9-5"/><path d="M12 12v10"/></svg></div>
+        <div class="e-why">2 条"机器人"相关事件处于未映射主题——当前规则没有对应分类，<b>不能强行推荐股票</b>。</div>
+        <div class="e-how">等规则库更新后自动归类，或到复核中心为模型提议的新主题投票。</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footnote">
+    <b>自选与线索</b> = 真实 MVP「板块影响/正负线索/未映射主题」复刻 + C 端化（线索带贡献事件与复核状态、正负不抵消口径条、未映射空态明示"不能强行推荐"）· 演示数据 · <b>不构成投资建议</b>。
+  </footer>
+</main>
+</div>
+<script src="proto.js?v=1"></script>
+</body>
+</html>

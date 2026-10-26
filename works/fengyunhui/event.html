@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>风云汇 · 事件研究</title>
+<link rel="stylesheet" href="proto.css?v=1">
+</head>
+<body>
+<div class="shell" id="shell" data-page="event" data-title="事件研究" data-sub="模型拆分完成 ≠ 人工认可">
+<main class="wrap">
+
+  <div class="panel">
+    <div class="panel-head">
+      某集团发布新一代氢燃料电池电堆，功率密度提升 30%
+      <span class="tag">氢能</span><span class="tag">财联社</span><span class="num">2026-10-26 14:32</span>
+      <span class="demo-tag" style="margin-left:auto">演示数据</span>
+    </div>
+    <div class="panel-body">
+      <div class="kv">
+        <span class="k">证据选择</span><span class="v">已选 4 篇（含本文），每篇均可回查原文</span>
+        <span class="k">正文预算</span><span class="v">
+          <span class="budget" style="max-width:280px"><span class="b-track"><i style="width:58%"></i></span><span class="b-note">合计 <span class="num">11,600</span> / 20,000 字符（单次研究上限）</span></span>
+        </span>
+        <span class="k">模型额度</span><span class="v">今日剩余 <span class="num">17</span> / 20 次（失败也计数，不自动重试付费）</span>
+      </div>
+      <div class="row mt-2">
+        <button class="btn btn-primary" type="button">生成事件拆解与影响研究</button>
+        <button class="btn btn-ghost" type="button">查看发送范围</button>
+      </div>
+      <div class="warn-strip">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        <span>首页刷新与自动同步不会调用模型；只有你主动点击才会产生费用。错引、未知主题等校验失败会显示原因且<b>不发布</b>。</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">子事件拆解<span class="p-sub">MiMo 生成 · 2026-10-26 14:41 · 引文校验通过</span></div>
+    <div class="panel-body">
+
+      <div class="subevent-card">
+        <div class="se-head">
+          <span class="se-title">子事件 1 · 电堆功率密度提升</span>
+          <span class="tag up">方向：利好</span><span class="tag">期限：中长期</span>
+        </div>
+        <div class="kv">
+          <span class="k">影响机制</span><span class="v">功率密度是电堆核心指标，提升 30% 若被验证，将改善整车功率裕度与氢耗成本 [1]</span>
+          <span class="k">成立条件</span><span class="v">① 第三方实测复现该数据；② 对应车型 2027 年量产计划不变 [2]</span>
+          <span class="k">关联主题</span><span class="v">氢能 · 燃料电池设备</span>
+        </div>
+        <div class="counter-case"><b>反例（模型自列）：</b>若数据仅限实验室环境、或量产节点推迟，该利好不成立；历史上同公司 2025 年类似宣传后交付低于预期。</div>
+        <div class="mt-1">
+          <span class="src-link" data-quote="qe-1">[1] 引文 · 财联社原文 →</span>
+          <span class="src-link" data-quote="qe-2" style="margin-left:10px">[2] 引文 · 公司公告 →</span>
+        </div>
+        <div class="quote-card" id="qe-1"><div class="q-text">"新一代电堆体积功率密度较上一代提升约 30%，模块化设计支持车用与备用电源双场景。"</div><div class="q-meta"><span class="num">2026-10-26</span><span>财联社 · 第 3 段</span><span class="tag ok">引文匹配</span><a href="#">打开对应版本原文</a></div></div>
+        <div class="quote-card" id="qe-2"><div class="q-text">"配套车型计划于 2027 年上半年量产，具体节奏以正式公告为准。"</div><div class="q-meta"><span class="num">2026-09-30</span><span>公司投资者关系活动记录</span><span class="tag ok">引文匹配</span><a href="#">打开对应版本原文</a></div></div>
+      </div>
+
+      <div class="subevent-card">
+        <div class="se-head">
+          <span class="se-title">子事件 2 · 量产时点的表述为"计划"</span>
+          <span class="tag fade">方向：中性</span><span class="tag">期限：待定</span>
+        </div>
+        <div class="kv">
+          <span class="k">影响机制</span><span class="v">新闻中"计划""拟"等表述保留原样，不转写成已落地 [2]</span>
+          <span class="k">成立条件</span><span class="v">需后续正式公告确认，当前不作为利好依据</span>
+        </div>
+        <div class="warn-strip" style="margin-top:11px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+          <span>原文引用正确，<b>不保证推断成立</b>——本栏是模型样本，未经人工复核不计入采纳统计。</span>
+        </div>
+      </div>
+
+      <div class="panel" style="background:var(--bg-3)">
+        <div class="panel-head">影响强度参考<span class="p-sub">红星 = 基本面影响强度，不是上涨概率</span></div>
+        <div class="panel-body">
+          <div class="row" style="align-items:center;gap:16px">
+            <span class="stars">
+              <svg class="on" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56L12 2z"/></svg>
+              <svg class="on" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56L12 2z"/></svg>
+              <svg class="on" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56L12 2z"/></svg>
+              <svg class="off" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56L12 2z"/></svg>
+              <svg class="off" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56L12 2z"/></svg>
+            </span>
+            <span class="gold-num">3 / 5</span>
+            <span class="muted">证券主数据、行情事实与人工复核完成前，星级仅作用于已复核样本，不会自动加到线上新闻。</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-2" style="align-items:center">
+        <span class="muted" style="flex:1">复核只记录你的意见，不修改模型原文与证据：</span>
+        <a class="btn btn-primary btn-sm" href="review.html">采纳 · 填写复核备注</a>
+        <a class="btn btn-danger btn-sm" href="review.html">驳回</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footnote">
+    <b>事件研究详情</b> = 真实 MVP「生成事件拆解与影响研究」复刻 + C 端化（证据预算可视化、每个论断带可点引文、反例与"计划性表述"保留、星级口径=影响强度≠上涨概率、采纳/驳回流）· 演示数据 · <b>不构成投资建议</b>。
+  </footer>
+</main>
+</div>
+<script src="proto.js?v=1"></script>
+</body>
+</html>

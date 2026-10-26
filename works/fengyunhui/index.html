@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>闻迹风云汇 · C 端重设计案例</title>
+<link rel="stylesheet" href="proto.css?v=1">
+</head>
+<body>
+<div class="cover">
+
+  <div class="cover-hero">
+    <div class="cover-mark">汇</div>
+    <div class="cover-title">闻迹风云汇 · C 端重设计</div>
+    <div class="cover-slogan">把一个真实跑通的"板块事件研究系统"，翻译成个人投资者敢用的每日情报界面——<b style="color:var(--gold);text-shadow:0 0 14px var(--gold-glow)">事件研究，不猜涨跌</b></div>
+    <div class="cover-badges">
+      <span class="tag brand">真实项目改造 · 非虚构案例</span>
+      <span class="tag">可点击原型 5 页</span>
+      <span class="tag">AI 不确定性的优雅处理样本</span>
+    </div>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">真实资产 → 界面转译（这个案例不是空想）</div>
+    <div class="panel-body scroll-x">
+      <table class="wtable">
+        <tr><th>真实 MVP 已实现（v0.1→v0.7）</th><th>工作台形态</th><th>C 端界面翻译</th></tr>
+        <tr><td>板块事件雷达 + 本地精选新闻</td><td>6 个板块默认卡 + 展开列表</td><td><a href="radar.html">热力卡 + 事件流</a>，状态前置、未拆解不表态</td></tr>
+        <tr><td>MiMo 事件拆解（≤6 篇证据 / 2 万字符 / 日 20 次）</td><td>按钮 + 日志</td><td><a href="event.html">证据预算条 + 子事件卡</a>，额度与成本可见</td></tr>
+        <tr><td>引文展开 + 打开对应版本原文</td><td>文本链接</td><td>每个论断带 <a href="event.html">可点引文卡</a>（来源/时间/定位）</td></tr>
+        <tr><td>采纳/驳回 + 复核备注；错引不发布</td><td>管理页表格</td><td><a href="review.html">复核中心</a>：队列 + 校验失败卡 + 复核账本</td></tr>
+        <tr><td>正负线索不抵消；未映射主题不荐股</td><td>说明文字</td><td><a href="watchlist.html">自选页口径条 + 空态卡</a>明示纪律</td></tr>
+        <tr><td>v0.7 行情事实层（configured=false 不伪造）</td><td>接口状态</td><td><a href="market.html">行情核验页</a>：诚实空态 + 五种核验状态</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="cover-grid">
+    <a class="doc-card" href="radar.html"><div class="d-num">P1</div><div class="d-title">板块雷达</div><div class="d-desc">热力卡可视化 · 未拆解事件明示"不表态" · 额度口径</div></a>
+    <a class="doc-card" href="event.html"><div class="d-num">P2</div><div class="d-title">事件研究详情</div><div class="d-desc">证据预算 · 子事件拆解 · 引文可点 · 星级≠涨跌概率</div></a>
+    <a class="doc-card" href="watchlist.html"><div class="d-num">P3</div><div class="d-title">自选与线索</div><div class="d-desc">正负不抵消口径 · 未映射主题空态 · 贡献事件回查</div></a>
+    <a class="doc-card" href="review.html"><div class="d-num">P4</div><div class="d-title">复核中心</div><div class="d-desc">采纳/驳回流 · 错引拦截卡 · 复核账本时间线</div></a>
+    <a class="doc-card" href="market.html"><div class="d-num">P5</div><div class="d-title">行情核验</div><div class="d-desc">configured=false 诚实空态 · 五种核验状态 · 矛盾并列</div></a>
+    <a class="doc-card wide" href="../../docs/fengyunhui-README.md"><div class="d-num">DOC</div><div class="d-body"><div class="d-title">案例说明与面试叙事</div><div class="d-desc">真实项目迭代史（PRD v0.1–v0.7）→ 设计决策 → 常见追问预案</div></div><span class="tag brand">README →</span></a>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">30 秒电梯稿</div>
+    <div class="panel-body" style="font-size:13.5px;color:var(--ink-2);line-height:1.9">
+      这是我自己从 0 做到 v0.7 的真实系统：采集 → 本地向量知识库 → 模型事件拆解 → 引文核验 → 人工复核。C 端重设计要解决的问题是——投资者面对 AI 结论时"凭什么信"。所以每一屏都在回答同一件事：证据可回查（引文卡）、口径可见（星级=影响强度≠涨跌概率）、不确定就明示（未拆解不表态、行情未配置不伪造、错引不发布）。
+    </div>
+  </div>
+
+  <footer class="footnote" style="text-align:center">
+    求职作品集 · 基于真实项目《闻迹风云汇》（MVP v0.1–v0.7，独立完成）的界面重设计 · 页面数据均为演示数据 · <b>全部内容仅为产品交互演示，不构成投资建议</b> · 2026-10
+  </footer>
+</div>
+</body>
+</html>

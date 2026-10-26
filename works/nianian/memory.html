@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>念念 · 记忆</title>
+<link rel="stylesheet" href="proto.css?v=5">
+</head>
+<body>
+<div class="shell" id="shell" data-page="memory" data-title="记忆" data-sub="看得见 · 查得到 · 管得住">
+<main class="wrap" data-seg-scope data-mode="all">
+
+  <div class="stat-row">
+    <div class="stat-card"><div class="s-label">已确认<i class="ib" data-tip="口径：你在复核队列点过"采纳"的记忆条数。仅此类记忆可被长期引用。"></i></div><div class="s-num">12</div><div class="s-foot">长期库 · 可靠引用</div></div>
+    <div class="stat-card"><div class="s-label">待确认<i class="ib" data-tip="口径：AI 已提炼、你未处置的记忆草稿；每日队列上限 5 条，24 小时未处置自动搁置，绝不静默入库。"></i></div><div class="s-num">3</div><div class="s-foot">草稿 · 不处置不入库</div></div>
+    <div class="stat-card"><div class="s-label">已褪色<i class="ib" data-tip="口径：距上次确认 ≥30 天的记忆。引用时 AI 会主动带"可能记不准"提示，不会当作确定事实使用。"></i></div><div class="s-num">2</div><div class="s-foot">≥30 天未确认</div></div>
+    <div class="stat-card"><div class="s-label">冲突<i class="ib" data-tip="口径：新旧说法矛盾、待你裁决的记忆主题。冲突期间 AI 并列引用两种说法，不替你猜。"></i></div><div class="s-num">1</div><div class="s-foot">待裁决 · <a href="conflict.html">去处理</a></div></div>
+  </div>
+  <div class="row mt-2" style="align-items:center;justify-content:space-between">
+    <div class="seg" role="tablist">
+      <button class="seg-btn active" data-seg="all">全部</button>
+      <button class="seg-btn" data-seg="pending">待确认</button>
+      <button class="seg-btn" data-seg="faded">已褪色</button>
+      <button class="seg-btn" data-seg="conflict">冲突</button>
+    </div>
+    <span class="demo-tag">本页均为演示数据</span>
+  </div>
+
+  <div class="filter-scope mt-2">
+
+    <div class="panel mt-2">
+      <div class="panel-head">核心档案<span class="p-sub">2 条</span></div>
+      <div class="panel-body">
+        <div class="mem-row" data-state="confirmed">
+          <div class="mr-body"><div class="mr-text">在广州工作，互联网行业 <span class="pin-star" title="已置顶：永不褪色、不被淘汰"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26 6.6.56-5 4.36 1.5 6.45L12 16.9l-6 3.73 1.5-6.45-5-4.36 6.6-.56L12 2z"/></svg></span></div>
+          <div class="mr-meta"><span class="tag ok">已确认</span><span class="mem-days">距上次确认 12 天</span><span class="src-link" href="memory-detail.html" onclick="location.href='memory-detail.html'">详情 →</span></div></div>
+        </div>
+        <div class="mem-row" data-state="confirmed">
+          <div class="mr-body"><div class="mr-text">养了一只猫，叫芝麻</div>
+          <div class="mr-meta"><span class="tag ok">已确认</span><span class="mem-days">距上次确认 20 天</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel mt-2">
+      <div class="panel-head">偏好喜好<span class="p-sub">3 条</span></div>
+      <div class="panel-body">
+        <div class="mem-row" data-state="confirmed">
+          <div class="mr-body"><div class="mr-text">早餐喝燕麦拿铁</div>
+          <div class="mr-meta"><span class="tag ok">已确认</span><span class="mem-days">距上次确认 6 天</span>
+            <span class="src-link" data-quote="q-m1">来源 · 10月14日 →</span></div></div>
+          <div class="quote-card" id="q-m1"><div class="q-text">"最近早上都喝燕麦拿铁了，比奶茶健康点。"</div><div class="q-meta"><span class="num">2026-10-14</span><span class="tag ok">已确认</span><span>来源对话共 3 段</span></div></div>
+        </div>
+        <div class="mem-row" data-state="conflict">
+          <div class="mr-body"><div class="mr-text">咖啡口味：喜欢美式 ↔ 最近改喝燕麦拿铁</div>
+          <div class="mr-meta"><span class="tag bad">⚠ 冲突</span><span>新旧说法矛盾，并列待裁决</span><span class="src-link" onclick="location.href='conflict.html'">去裁决 →</span></div></div>
+        </div>
+        <div class="mem-row is-faded" data-state="faded">
+          <div class="mr-body"><div class="mr-text">周末喜欢徒步</div>
+          <div class="mr-meta"><span class="tag fade">已褪色</span><span class="mem-days">距上次确认 45 天</span>
+            <span class="src-link" data-quote="q-m2">来源 · 09月11日 →</span><span class="muted">引用时会提示"可能记不准"</span></div></div>
+          <div class="quote-card" id="q-m2"><div class="q-text">"周末要是没事就想出去走走，徒步挺解压的。"</div><div class="q-meta"><span class="num">2026-09-11</span><span class="tag fade">已褪色</span><span>之后再未确认过</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel mt-2">
+      <div class="panel-head">人际关系<span class="p-sub">1 条</span></div>
+      <div class="panel-body">
+        <div class="mem-row" data-state="confirmed">
+          <div class="mr-body"><div class="mr-text">室友最近在准备考研</div>
+          <div class="mr-meta"><span class="tag ok">已确认</span><span class="mem-days">距上次确认 9 天</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel mt-2">
+      <div class="panel-head">日程计划<span class="p-sub">2 条草稿</span></div>
+      <div class="panel-body">
+        <div class="mem-row" data-state="pending">
+          <div class="mr-body"><div class="mr-text">11月5日有产品岗面试</div>
+          <div class="mr-meta"><span class="tag warn">待确认</span><span>今天对话中提炼</span><span class="src-link" onclick="location.href='memory-review.html'">去确认 →</span></div></div>
+        </div>
+        <div class="mem-row" data-state="pending">
+          <div class="mr-body"><div class="mr-text">下周要去北京出差</div>
+          <div class="mr-meta"><span class="tag warn">待确认</span><span>10月19日提炼 · 7 天未处置将搁置</span><span class="src-link" onclick="location.href='memory-review.html'">去确认 →</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel mt-2">
+      <div class="panel-head">重要事件<span class="p-sub">1 条</span></div>
+      <div class="panel-body">
+        <div class="mem-row" data-state="confirmed">
+          <div class="mr-body"><div class="mr-text">正在从运营转向产品方向</div>
+          <div class="mr-meta"><span class="tag ok">已确认</span><span class="mem-days">距上次确认 18 天</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel mt-2">
+      <div class="panel-head">技能知识<span class="p-sub">1 条</span></div>
+      <div class="panel-body">
+        <div class="mem-row" data-state="confirmed">
+          <div class="mr-body"><div class="mr-text">在学 SQL，能写基础查询</div>
+          <div class="mr-meta"><span class="tag ok">已确认</span><span class="mem-days">距上次确认 30 天</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel mt-2">
+      <div class="panel-head">情绪习惯<span class="p-sub">2 条</span></div>
+      <div class="panel-body">
+        <div class="mem-row" data-state="pending">
+          <div class="mr-body"><div class="mr-text">最近情绪偏低、工作压力大</div>
+          <div class="mr-meta"><span class="tag warn">待确认</span><span class="tag">敏感类 · 需你在复核中主动采纳</span><span class="src-link" onclick="location.href='memory-review.html'">去确认 →</span></div></div>
+        </div>
+        <div class="mem-row is-faded" data-state="faded">
+          <div class="mr-body"><div class="mr-text">压力大时会夜跑五公里</div>
+          <div class="mr-meta"><span class="tag fade">已褪色</span><span class="mem-days">距上次确认 52 天</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel mt-2">
+      <div class="panel-head">约定承诺<span class="p-sub">0 条</span></div>
+      <div class="panel-body">
+        <div class="empty-card" data-state="confirmed pending faded conflict">
+          <div class="e-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <div class="e-why">你们还没有任何约定——念念不会替你虚构承诺。</div>
+          <div class="e-how">说一句"提醒我……"，它就会出现在这里。</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="muted mt-2">其余 5 条已确认记忆此处省略展示（演示数据）。记忆上限说明：本产品不做竞品式"超限自动覆盖最早记忆"——褪色记忆可置顶保留，淘汰规则全部可见（PRD §5.3）。</div>
+
+  <footer class="footnote">
+    <b>M4 记忆面板</b> = 竞品「豆包记忆管理 / ChatGPT Memories 列表」复刻 + L2 增强（八模块分组、状态口径角标、来源可点）+ L3 增强（褪色机制可视化、置顶对抗 FIFO 黑箱淘汰）· PRD §M4 · 演示数据。
+  </footer>
+</main>
+</div>
+<script src="proto.js?v=2"></script>
+</body>
+</html>

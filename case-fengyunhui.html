@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>闻迹风云汇 · A 股板块事件研究系统 — 案例页</title>
+<meta name="description" content="真实项目：采集→向量知识库→模型事件拆解→引文核验→人工复核，v0.1–v0.7 独立迭代；附 C 端界面重设计 5 页原型。">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap bar">
+    <a class="brandmark" href="index.html"><span class="bm">M</span><span>Muchyoung<span style="font-weight:400;color:var(--ink-3);font-size:12px;margin-left:6px">作品集</span></span></a>
+    <nav class="site-nav"><a href="index.html#works">← 返回作品</a></nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="case-hero">
+    <div class="cat"><span class="tag gold">真实项目 · 独立迭代 v0.1 → v0.7</span><span class="tag">AI 研究工具</span><span class="tag">C 端重设计</span></div>
+    <h1>闻迹风云汇 — 板块事件研究系统</h1>
+    <p class="one">一条完整闭环：<b style="color:var(--ink)">采集 → 本地向量知识库 → 模型事件拆解 → 引文核验 → 人工采纳/驳回复核 → 行情事实层</b>。它不猜涨跌——"模型拆分完成 ≠ 人工认可""星级 = 基本面影响强度，不是上涨概率"是写进产品的纪律。C 端重设计把这些纪律翻译成个人投资者看得懂的界面。</p>
+    <div class="meta-grid">
+      <div class="meta-cell"><div class="k">角色</div><div class="v">产品 / 设计 / 实现全独立</div></div>
+      <div class="meta-cell"><div class="k">周期</div><div class="v">2026.08 – 至今 · 七个版本</div></div>
+      <div class="meta-cell"><div class="k">产出</div><div class="v">系统 + PRD 链 + 5 页重设计原型</div></div>
+      <div class="meta-cell"><div class="k">技术</div><div class="v">SQLite · BGE 512 维向量 · MiMo</div></div>
+    </div>
+    <div class="case-actions">
+      <a class="btn btn-primary" href="works/fengyunhui/index.html">打开 C 端重设计原型（5 页）</a>
+      <a class="btn" href="docs/fengyunhui-README.md">下载案例说明（含追问预案）</a>
+    </div>
+  </div>
+
+  <div class="case-sec">
+    <h2><span class="no">01</span>系统里真实存在的东西</h2>
+    <p class="lead">这不是画出来的产品——下面每一行都对应可以演示的运行机制（演示环境随时可跑）：</p>
+    <table class="mini-table">
+      <tr><th>模块</th><th>真实实现</th><th>设计上的取舍</th></tr>
+      <tr><td>知识库</td><td>SQLite + BGE 512 维向量，版本快照 / 幂等 / 备份恢复</td><td>原文永不因"不重要"被丢弃；索引失败保留旧版本</td></tr>
+      <tr><td>事件拆解</td><td>MiMo 生成子事件：方向 / 期限 / 机制 / 成立条件 / 反例</td><td>证据 ≤6 篇、正文 ≤2 万字符、日 20 次额度——成本口径可见</td></tr>
+      <tr><td>引文核验</td><td>每个论断可展开原文引文，错引校验失败不发布</td><td>原文引用正确，也不保证推断成立——页面明示</td></tr>
+      <tr><td>人工复核</td><td>采纳 / 驳回 + 复核备注；驳回报告退出统计但可追溯</td><td>复核只记录意见，不修改模型原文与证据</td></tr>
+      <tr><td>行情事实层</td><td>五种核验状态；未配置供应商即 configured=false</td><td>不用模拟数据冒充行情；矛盾并列展示不裁决</td></tr>
+    </table>
+  </div>
+
+  <div class="case-sec">
+    <h2><span class="no">02</span>C 端重设计：把"凭什么信"翻译成界面</h2>
+    <p class="lead">工作台是给研究员的；个人投资者打开同一套系统时，第一问是"这个 AI 结论我能信吗"。重设计的每一屏都在回答它：</p>
+    <div class="shot-row">
+      <figure class="shot"><img src="assets/img/fyhui-radar.jpg" alt="板块雷达页"><figcaption>板块雷达：热力卡可视化；未拆解事件明示"不显示利好/利空判断"；每日模型额度口径可见。</figcaption></figure>
+      <figure class="shot"><img src="assets/img/fyhui-event.jpg" alt="事件研究详情页"><figcaption>事件研究详情：证据预算条、子事件卡（含反例）、引文卡可翻原文、星级 = 影响强度 ≠ 涨跌概率。</figcaption></figure>
+    </div>
+    <table class="mini-table">
+      <tr><th>真实机制</th><th>界面语言</th></tr>
+      <tr><td>引文展开 + 版本原文</td><td>每个论断带可点引文卡（来源 / 时间 / 定位）</td></tr>
+      <tr><td>错引不发布、不自动付费重试</td><td>复核中心的"校验失败"拦截卡——失败可见但不惊吓</td></tr>
+      <tr><td>正负线索不抵消；未映射主题不荐股</td><td>自选页口径条 + 空态卡直接写明纪律</td></tr>
+      <tr><td>行情未配置不伪造</td><td>诚实空态：configured=false + "不用模拟数据冒充行情"</td></tr>
+    </table>
+  </div>
+
+  <div class="case-sec">
+    <h2><span class="no">03</span>为什么不做涨跌预测</h2>
+    <p class="lead">因为没有行情回测与复权数据支撑，预测不可验证；<b style="color:var(--ink)">不可验证的输出对投资者是负资产。</b>路线图的顺序本身就是设计决策：人工复核与标注 → 跨来源事件聚类 → 证券主数据 → 授权行情验证——而不是直接让模型猜涨跌。</p>
+  </div>
+
+  <div class="pn-row">
+    <a class="btn btn-ghost" href="case-nianian.html">← 念念 · 完整案例</a>
+    <a class="btn btn-primary" href="works/fengyunhui/index.html">进入原型 →</a>
+    <a class="btn btn-ghost" href="case-sensen.html">森森 · 架构设计 →</a>
+  </div>
+
+</div>
+</main>
+
+<footer class="site-foot"><div class="wrap f-grid">
+  <p>Muchyoung · AI 产品设计作品集 · 原型为演示数据 · 不构成投资建议</p>
+  <p><a href="index.html">← 返回主页</a></p>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>念念 · 关怀</title>
+<link rel="stylesheet" href="proto.css?v=5">
+</head>
+<body>
+<div class="shell" id="shell" data-page="care" data-title="关怀" data-sub="有账本 · 有边界 · 可关停">
+<main class="wrap" data-seg-scope data-mode="plans">
+
+  <div class="row" style="align-items:center;justify-content:space-between">
+    <div class="seg" role="tablist">
+      <button class="seg-btn active" data-seg="plans">关怀计划</button>
+      <button class="seg-btn" data-seg="ledger">关怀账本</button>
+      <button class="seg-btn" data-seg="bound">边界设置</button>
+    </div>
+    <span class="muted">关怀由你设定边界，我只在边界内主动。</span>
+  </div>
+
+  <!-- 计划 -->
+  <div class="step-pane active" data-seg-pane="plans">
+    <div class="care-card mt-2">
+      <div class="c-head">
+        <span class="c-title">北京出差 · 回京后问问顺利吗</span>
+        <span class="tag ok">已确认</span>
+        <button class="btn btn-ghost btn-sm" type="button">暂停</button>
+      </div>
+      <div class="c-meta">
+        <span>触发：返程日 11月10日 后首次对话</span>
+        <span>依据记忆：日程计划"下周去北京出差"
+          <span class="src-link" data-quote="qc-plan">查看 →</span>
+        </span>
+        <span class="mem-days">距上次确认 6 天</span>
+      </div>
+      <div class="quote-card" id="qc-plan"><div class="q-text">"下周要去北京出差几天，顺便看看那边的展。"</div><div class="q-meta"><span class="num">2026-10-19</span><span class="tag warn">待确认</span><span>计划将在此记忆确认后正式生效</span></div></div>
+    </div>
+
+    <div class="care-card">
+      <div class="c-head">
+        <span class="c-title">面试期 · 到点给你加油</span>
+        <span class="tag warn">待记忆确认</span>
+      </div>
+      <div class="c-meta">
+        <span>触发：11月5日 面试当天早上（免打扰时段外）</span>
+        <span>依据记忆：日程计划"11月5日产品岗面试"</span>
+      </div>
+      <div class="muted mt-1">依据记忆仍是草稿——确认后计划才会生效，避免关怀建立在 AI 的误听上。</div>
+    </div>
+
+    <div class="care-card">
+      <div class="c-head">
+        <span class="c-title">情绪低落时 · 主动陪聊</span>
+        <span class="tag ok">已确认</span>
+        <span class="tag brand">已触发 1 次</span>
+        <button class="btn btn-ghost btn-sm" type="button">暂停</button>
+      </div>
+      <div class="c-meta"><span>依据记忆：情绪习惯（敏感类，你在复核中主动采纳）</span><span>方式：轻问候一次，不追问</span></div>
+    </div>
+
+    <div class="empty-card mt-2">
+      <div class="e-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg></div>
+      <div class="e-why">新建计划必须关联一条已确认的记忆——没有依据的"主动"是打扰。</div>
+      <div class="e-how">先在对话里聊到这件事，再去复核确认，计划就能关联它。</div>
+    </div>
+  </div>
+
+  <!-- 账本 -->
+  <div data-seg-pane="ledger" class="step-pane">
+    <div class="care-card mt-2">
+      <div class="c-head"><span class="num">10月24日 08:12</span><span class="tag brand">面试期关怀</span></div>
+      <div class="c-meta" style="font-size:13.5px;color:var(--ink)">"面试加油——你准备自我介绍已经练了两遍，今天正常发挥就好。"</div>
+      <div class="c-meta">
+        <span>依据：10月21日对话（面试准备）<span class="src-link" data-quote="ql-1">查看 →</span></span>
+        <span class="fb-chip helpful">有帮助 👍</span><span class="fb-chip">打扰</span>
+      </div>
+      <div class="quote-card" id="ql-1"><div class="q-text">"自我介绍改到第三版了，越改越没底。"</div><div class="q-meta"><span class="num">2026-10-21</span><span>对话《面试准备》</span></div></div>
+    </div>
+
+    <div class="care-card">
+      <div class="c-head"><span class="num">10月22日 09:00</span><span class="tag">日常问候</span></div>
+      <div class="c-meta" style="font-size:13.5px;color:var(--ink)">"北京这两天降温，出差记得添件外套。"</div>
+      <div class="c-meta"><span>依据：出差计划 + 公开天气</span><span class="fb-chip">未标记</span></div>
+    </div>
+
+    <div class="care-card">
+      <div class="c-head"><span class="num">10月18日 08:30</span><span class="tag fade">天气问候 · 已停发</span></div>
+      <div class="c-meta" style="font-size:13.5px;color:var(--ink)">"早上好，今天也喝燕麦拿铁吗？"</div>
+      <div class="c-meta">
+        <span>依据：偏好喜好</span><span class="fb-chip disturb">被标记打扰</span>
+        <span class="muted">当日该主题自动降频，两次打扰后停发（见边界设置）</span>
+      </div>
+    </div>
+
+    <div class="muted">账本永久保留已发关怀与反馈，即使主题停发也不删除——主动行为的完整记录是你的知情权（PRD §8.2/8.4）。</div>
+  </div>
+
+  <!-- 边界 -->
+  <div data-seg-pane="bound" class="step-pane">
+    <div class="panel mt-2">
+      <div class="panel-head">总开关</div>
+      <div class="panel-body">
+        <div class="bound-row">
+          <div class="b-main"><div class="b-title">主动关怀</div><div class="b-sub">关闭后念念只会被动回应，账本停止更新</div></div>
+          <label class="switch"><input type="checkbox" checked><span class="sl"></span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel mt-2">
+      <div class="panel-head">频率与时段</div>
+      <div class="panel-body">
+        <div class="bound-row">
+          <div class="b-main"><div class="b-title">每日上限</div><div class="b-sub">含所有主题；超限顺延到次日</div></div>
+          <div class="seg"><button class="seg-btn active" type="button">1 条</button><button class="seg-btn" type="button">2 条</button><button class="seg-btn" type="button">3 条</button></div>
+        </div>
+        <div class="bound-row">
+          <div class="b-main"><div class="b-title">免打扰时段</div><div class="b-sub">期间不发起任何主动消息</div></div>
+          <span class="tag num">22:00 – 08:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel mt-2">
+      <div class="panel-head">主题开关<span class="p-sub">单一主题可关停，不影响其他关怀</span></div>
+      <div class="panel-body">
+        <div class="bound-row">
+          <div class="b-main"><div class="b-title">面试期关怀</div><div class="b-sub">已发 1 次 · 反馈：有帮助</div></div>
+          <label class="switch"><input type="checkbox" checked><span class="sl"></span></label>
+        </div>
+        <div class="bound-row is-off">
+          <div class="b-main"><div class="b-title">天气问候（已关停）</div><div class="b-sub">10月18日你标记"打扰"，次日自动停发 · <a href="#">重启</a></div></div>
+          <label class="switch"><input type="checkbox"><span class="sl"></span></label>
+        </div>
+        <div class="bound-row">
+          <div class="b-main"><div class="b-title">情绪陪伴</div><div class="b-sub">仅在你主动采纳"情绪类记忆"后可用</div></div>
+          <label class="switch"><input type="checkbox" checked><span class="sl"></span></label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footnote">
+    <b>M8 关怀中心</b> = 竞品「ChatGPT Tasks（用户自设）/ 陪伴类产品主动消息」复刻 + L3 独有（关怀必关联依据记忆、账本可回查、被标打扰自动降频停发、三层边界控制）· PRD §M8 · 演示数据。
+  </footer>
+</main>
+</div>
+<script src="proto.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>念念 · 冲突裁决</title>
+<link rel="stylesheet" href="proto.css?v=5">
+</head>
+<body>
+<div class="shell" id="shell" data-page="memory" data-title="冲突裁决" data-sub="矛盾不静默覆盖，并列交给你">
+<main class="wrap">
+
+  <div class="panel danger">
+    <div class="panel-head">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color:var(--bad)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+      检测到 1 处记忆不一致 · 主题「咖啡口味」
+      <span class="demo-tag" style="margin-left:auto">演示数据</span>
+    </div>
+    <div class="panel-body">
+      <div class="muted">同主题下出现了两种说法。念念不会替你猜哪个对——裁决前，两种都会被并列提及。</div>
+
+      <div class="conflict-versus mt-2">
+        <div class="side-card old">
+          <div class="sc-label"><span class="tag ok">旧 · 已确认</span><span class="num">2026-09-12</span></div>
+          <div class="sc-text">喜欢喝美式</div>
+          <div class="mt-1"><span class="src-link" data-quote="qc-old">来源 →</span></div>
+          <div class="quote-card" id="qc-old"><div class="q-text">"上班全靠美式吊着，一天两杯。"</div><div class="q-meta"><span class="num">2026-09-12</span><span>对话《工作日常》</span><span class="tag ok">已确认</span></div></div>
+        </div>
+        <div class="side-card new">
+          <div class="sc-label"><span class="tag warn">新 · 待确认</span><span class="num">2026-10-14</span></div>
+          <div class="sc-text">最近改喝燕麦拿铁</div>
+          <div class="mt-1"><span class="src-link" data-quote="qc-new">来源 →</span></div>
+          <div class="quote-card" id="qc-new"><div class="q-text">"最近早上都喝燕麦拿铁了，比奶茶健康点。"</div><div class="q-meta"><span class="num">2026-10-14</span><span>对话《降温与早餐》</span><span class="tag warn">待确认</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">怎么处理？</div>
+    <div class="panel-body">
+      <div class="bound-row">
+        <div class="b-main">
+          <div class="b-title">以新为准</div>
+          <div class="b-sub">旧记忆存档不删除，仍可在详情页时间线看到</div>
+        </div>
+        <button class="btn btn-primary btn-sm" type="button">选这个</button>
+      </div>
+      <div class="bound-row">
+        <div class="b-main">
+          <div class="b-title">分场景都对</div>
+          <div class="b-sub">例：上班美式、早上燕麦拿铁——记忆带上场景前缀，两种都对</div>
+        </div>
+        <button class="btn btn-sm" type="button">编辑场景</button>
+      </div>
+      <div class="bound-row">
+        <div class="b-main">
+          <div class="b-title">以旧为准</div>
+          <div class="b-sub">新说法标记为"一次性尝试"，不进入长期记忆</div>
+        </div>
+        <button class="btn btn-sm" type="button">选这个</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">冲突期间的对话是什么样</div>
+    <div class="panel-body">
+      <div class="msg ai" style="max-width:100%">
+        两种我都记得——你 9 月说过上班喝美式，10 月又说早上换燕麦拿铁了。现在是口味变了，还是分场景喝？
+        <div class="muted mt-1">并列引用 + 反问澄清，不二选一（PRD §7.3）。</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footnote">
+    <b>M7 冲突裁决</b> = 竞品「无此功能」（各家静默覆盖或并存冲突）+ L3 独有（冲突检测卡、分场景记忆、裁决入账本）· PRD §M7 · 演示数据。
+  </footer>
+</main>
+</div>
+<script src="proto.js?v=2"></script>
+</body>
+</html>

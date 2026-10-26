@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>念念 · 对话</title>
+<link rel="stylesheet" href="proto.css?v=5">
+</head>
+<body>
+<div class="shell" id="shell" data-page="chat" data-title="对话" data-sub="记忆召回出示出处 · 不确定就说不确定">
+<main class="wrap chat-col">
+
+  <div class="chat-scroll">
+
+    <div class="msg user">最近降温，早上出门好冷 ☕</div>
+
+    <div class="msg ai">
+      <div class="recall-card">
+        <div class="r-head">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5z"/><path d="M3 7l9 5 9-5"/><path d="M12 12v10"/></svg>
+          想起 · 偏好喜好 · <span class="tag ok">已确认<i class="ib" data-tip="口径：你于10月20日在复核中采纳过这条记忆；来源对话共3段。"></i></span>
+        </div>
+        你不是把早餐换成燕麦拿铁了吗？冷天配热乎的刚好，今天喝了吗？
+        <div class="mt-1"><span class="src-link" data-quote="q-coffee">来源 · 10月14日对话
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></span></div>
+        <div class="quote-card" id="q-coffee">
+          <div class="q-text">"最近早上都喝燕麦拿铁了，比奶茶健康点。"</div>
+          <div class="q-meta"><span class="num">2026-10-14</span><span>对话《降温与早餐》</span><span class="tag ok">已确认</span><span class="mem-days">距上次确认 6 天</span></div>
+        </div>
+      </div>
+      喝一杯热的再出门吧，胃暖了人也没那么怕冷。
+      <div class="m-actions">
+        <span class="m-act">重说</span>
+        <span class="m-act">有帮助</span>
+      </div>
+    </div>
+
+    <div class="msg user">对哈哈，坚持两周了。对了，下周三我有个产品岗的面试，有点紧张。</div>
+
+    <div class="msg ai">
+      两周就能养成习惯，你已经很厉害了。面试紧张很正常——想让我这周陪你过几遍自我介绍吗？
+      <div class="mt-1 mem-toast" onclick="location.href='memory-review.html'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+        我记下 1 条新记忆（待你确认）：产品岗面试 · 11月5日 <b>去确认 →</b>
+      </div>
+      <div class="muted mt-1">在你确认之前，它只是一条草稿——不会进入长期记忆（PRD §3.3 / §M6）。</div>
+    </div>
+
+    <div class="msg user">好呀。对了，你还记得我上次说要去北京出差的事吗？</div>
+
+    <div class="msg ai">
+      <div class="recall-card" style="border-left-color:var(--warn)">
+        <div class="r-head">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+          不确定 · 日程计划 · <span class="tag warn">未确认<i class="ib" data-tip="口径：AI 于10月19日自动提炼，你尚未在复核队列处置。未确认记忆只允许用'好像提过'句式引用。"></i></span>
+        </div>
+        你<b>好像</b>提过下周要去北京出差几天？我不太确定具体安排——
+        <div class="mt-1"><span class="src-link" data-quote="q-bj">来源 · 10月19日对话
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></span></div>
+        <div class="quote-card" id="q-bj">
+          <div class="q-text">"下周要去北京出差几天，顺便看看那边的展。"</div>
+          <div class="q-meta"><span class="num">2026-10-19</span><span>对话《周末计划》</span><span class="tag warn">未确认</span><span>距提炼 7 天</span></div>
+        </div>
+      </div>
+      说错你纠正我，我不想装作记得。如果你愿意，也可以直接去<span class="src-link" onclick="location.href='memory-review.html'">复核队列</span>告诉我对错。
+    </div>
+
+    <div class="msg ai" style="border-style:dashed">
+      <div class="gen-stage">
+        <span class="dots"><i></i><i></i><i></i></span>
+        念念正在回复：<span class="tag">① 想起中</span> → <span>② 组织语言</span> → <span>③ 回应你</span>
+      </div>
+      <div class="muted mt-1">有记忆召回时，第一阶段固定为"想起中"——让等待时间也解释自己在做什么（PRD §3.5）。</div>
+    </div>
+
+  </div>
+
+  <div class="chat-inputbar">
+    <div class="input-shell">
+      <div class="input-chips">
+        <span class="chip" data-fill="陪我过一遍自我介绍，面试岗位是产品岗">面试模拟</span>
+        <span class="chip" data-fill="今天有什么想问我的吗？">降温关心</span>
+        <span class="chip" data-fill="随便聊聊">随便聊聊</span>
+      </div>
+      <div class="input-row">
+        <textarea rows="1" placeholder="和念念说点什么…（它只会记住你确认过的内容）"></textarea>
+        <button class="btn btn-primary btn-sm" type="button">发送</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footnote">
+    <b>M3 对话进行时</b> = 竞品「豆包/ChatGPT 对话+记忆召回」复刻 + L2 增强（记忆召回必带来源引文卡；不确定记忆只允许"好像提过"句式；新记忆先进待确认队列）· PRD §M3 · 本页为求职作品集演示，人物与对话均为演示数据。
+  </footer>
+</main>
+</div>
+<script src="proto.js?v=2"></script>
+</body>
+</html>

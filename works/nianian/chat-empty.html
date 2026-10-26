@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>念念 · 新对话</title>
+<link rel="stylesheet" href="proto.css?v=5">
+</head>
+<body>
+<div class="shell" id="shell" data-page="chat" data-title="新对话" data-sub="提示词引导 · 推荐话题长着记忆">
+<main class="wrap chat-col">
+
+  <div class="chat-scroll">
+
+    <div class="panel" style="border:0;background:transparent">
+      <div style="text-align:center;padding:22px 0 6px">
+        <div style="font-size:21px;font-weight:700">晚上好 🌙</div>
+        <div class="muted mt-1">今天想和念念聊点什么？</div>
+        <div class="mt-2" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap">
+          <span class="tag brand">已记住 12 条</span>
+          <span class="tag warn">3 条待确认</span>
+          <a class="src-link" href="memory.html">查看我的记忆 →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="muted" style="margin:14px 0 9px">根据你的记忆推荐</div>
+    <div class="row">
+      <a class="topic-card" href="chat.html" style="flex:1;min-width:240px">
+        <div class="t-q">"上周三的产品面试，结果怎么样了？"</div>
+        <div class="t-meta">
+          <span class="tag ok">已确认</span><span>关联：日程计划</span><span class="mem-days">距上次确认 3 天</span>
+        </div>
+      </a>
+      <a class="topic-card" href="chat.html" style="flex:1;min-width:240px">
+        <div class="t-q">"降温了，你说过早上喝燕麦拿铁——今天喝了吗？"</div>
+        <div class="t-meta">
+          <span class="tag ok">已确认</span><span>关联：偏好喜好</span><span class="mem-days">距上次确认 6 天</span>
+        </div>
+      </a>
+      <a class="topic-card" href="chat.html" style="flex:1;min-width:240px">
+        <div class="t-q">"要不要聊聊这周的安排？"</div>
+        <div class="t-meta"><span class="tag">通用推荐</span><span>无关联记忆时降级为通用话题</span></div>
+      </a>
+    </div>
+
+    <div class="panel mt-3">
+      <div class="panel-head">空态示范（新用户看到的样子）<span class="p-sub">G2 空态纪律：原因 + 指引</span></div>
+      <div class="panel-body">
+        <div class="empty-card">
+          <div class="e-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <div class="e-why">我还不了解你——你的记忆库是空的，所以暂时推荐不了个性化话题。</div>
+          <div class="e-how">从任何一件小事聊起就好；想让我记住的，我会先问你再记。</div>
+          <div class="mt-1" style="display:flex;justify-content:center;gap:7px;flex-wrap:wrap">
+            <span class="chip" data-fill="我喜欢……（自我介绍式开场）">自我介绍</span>
+            <span class="chip" data-fill="今天有点累，想找人聊聊">聊聊今天</span>
+            <span class="chip" data-fill="帮我安排这一周的日程">安排日程</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="chat-inputbar">
+    <div class="input-shell">
+      <div class="input-row">
+        <textarea rows="1" placeholder="和念念说点什么…（它只会记住你确认过的内容）"></textarea>
+        <button class="btn btn-primary btn-sm" type="button">发送</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footnote">
+    <b>M2 空态与提示词引导</b> = 竞品「豆包示例 Prompt / 星野灵感回复」复刻 + L1+ 增强（推荐话题由记忆模块驱动，每卡带关联记忆与口径；无记忆时降级通用卡并说明原因——空态不冒充）· PRD §M2 · 演示数据。
+  </footer>
+</main>
+</div>
+<script src="proto.js?v=2"></script>
+</body>
+</html>

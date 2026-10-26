@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>风云汇 · 板块雷达</title>
+<link rel="stylesheet" href="proto.css?v=1">
+</head>
+<body>
+<div class="shell" id="shell" data-page="radar" data-title="板块雷达" data-sub="今天什么板块在发生事 · 未拆解不表态">
+<main class="wrap">
+
+  <div class="stat-row">
+    <div class="stat-card"><div class="s-label">今日事件<i class="ib" data-tip="口径：最近24小时采集入库的板块相关报道条数（去重后）。演示数据。"></i></div><div class="s-num">38</div><div class="s-foot">较昨日 +6</div></div>
+    <div class="stat-card"><div class="s-label">已拆解</div><div class="s-num">9</div><div class="s-foot">模型报告 · 待人工复核</div></div>
+    <div class="stat-card"><div class="s-label">待复核结论<i class="ib" data-tip="口径：模型生成且引文校验通过、等待人工采纳/驳回的子事件结论数。"></i></div><div class="s-num">4</div><div class="s-foot"><a href="review.html">去复核 →</a></div></div>
+    <div class="stat-card"><div class="s-label">剩余研究额度<i class="ib" data-tip="口径：每日最多 20 次模型调用尝试（UTC 计，含失败）；主动点击才会调用，页面刷新不消耗。"></i></div><div class="s-num">17</div><div class="s-foot">今日已用 3/20</div></div>
+  </div>
+  <div class="row mt-2" style="align-items:center;justify-content:space-between">
+    <div class="seg">
+      <button class="seg-btn active" type="button">最近 24 小时</button>
+      <button class="seg-btn" type="button">最近 7 天</button>
+      <button class="seg-btn" type="button">全部历史</button>
+    </div>
+    <span class="demo-tag">本页均为演示数据</span>
+  </div>
+  <div class="muted mt-1">卡片排序 = 本地精选新闻的消息活跃度，不是股票收益排名。</div>
+
+  <div class="heat-grid mt-2">
+    <a class="heat-card" href="watchlist.html">
+      <div class="h-name">氢能 <span class="tag up">利好 2</span><span class="tag down">利空 1</span></div>
+      <div class="h-events">今日 6 条事件 · 2 条已拆解</div>
+      <div class="h-bar"><i style="width:82%"></i></div>
+      <div class="h-clues"><span class="tag">活跃度 82</span><span class="tag ok">引文已核</span></div>
+    </a>
+    <a class="heat-card" href="watchlist.html">
+      <div class="h-name">存储芯片 <span class="tag up">利好 3</span></div>
+      <div class="h-events">今日 5 条事件 · 3 条已拆解</div>
+      <div class="h-bar"><i style="width:71%"></i></div>
+      <div class="h-clues"><span class="tag">活跃度 71</span><span class="tag ok">引文已核</span></div>
+    </a>
+    <a class="heat-card" href="watchlist.html">
+      <div class="h-name">创新药 <span class="tag down">利空 2</span></div>
+      <div class="h-events">今日 4 条事件 · 1 条已拆解</div>
+      <div class="h-bar"><i style="width:55%"></i></div>
+      <div class="h-clues"><span class="tag">活跃度 55</span></div>
+    </a>
+    <a class="heat-card" href="watchlist.html">
+      <div class="h-name">机器人 <span class="tag fade">未映射主题 ×2</span></div>
+      <div class="h-events">今日 3 条事件 · 尚未拆解</div>
+      <div class="h-bar"><i style="width:40%"></i></div>
+      <div class="h-clues"><span class="tag fade">规则无对应分类</span></div>
+    </a>
+    <a class="heat-card" href="watchlist.html">
+      <div class="h-name">消费电子 <span class="tag up">利好 1</span></div>
+      <div class="h-events">今日 3 条事件 · 1 条已拆解</div>
+      <div class="h-bar"><i style="width:33%"></i></div>
+      <div class="h-clues"><span class="tag">活跃度 33</span></div>
+    </a>
+    <a class="heat-card" href="watchlist.html">
+      <div class="h-name">煤炭 <span class="tag down">利空 1</span></div>
+      <div class="h-events">今日 2 条事件 · 1 条已拆解</div>
+      <div class="h-bar"><i style="width:21%"></i></div>
+      <div class="h-clues"><span class="tag">活跃度 21</span></div>
+    </a>
+  </div>
+
+  <div class="panel mt-3">
+    <div class="panel-head">事件流<span class="p-sub">点击查看研究详情 · 时间范围可切</span></div>
+    <div class="panel-body">
+      <div class="ev-row">
+        <span class="ev-time">14:32</span>
+        <div class="ev-main">
+          <div class="ev-title"><a href="event.html">某集团发布新一代氢燃料电池电堆，功率密度提升 30%</a></div>
+          <div class="ev-meta"><span class="tag">氢能</span><span>来源：财联社</span><span class="tag ok">已拆解 · 2 个子事件</span><span class="tag warn">待复核</span></div>
+        </div>
+      </div>
+      <div class="ev-row">
+        <span class="ev-time">13:05</span>
+        <div class="ev-main">
+          <div class="ev-title"><a href="event.html">存储龙头公布三季度业绩，毛利率环比改善</a></div>
+          <div class="ev-meta"><span class="tag">存储芯片</span><span>来源：证券时报</span><span class="tag ok">已拆解 · 3 个子事件</span></div>
+        </div>
+      </div>
+      <div class="ev-row">
+        <span class="ev-time">11:47</span>
+        <div class="ev-main">
+          <div class="ev-title"><a href="event.html">某车企澄清：固态电池量产时间表未变</a></div>
+          <div class="ev-meta"><span class="tag">氢能</span><span>来源：界面新闻</span><span class="tag fade">澄清类 · 保留观察</span></div>
+        </div>
+      </div>
+      <div class="ev-row">
+        <span class="ev-time">09:20</span>
+        <div class="ev-main">
+          <div class="ev-title">地方氢能产业补贴细则落地（快讯）</div>
+          <div class="ev-meta"><span class="tag">氢能</span><span>来源：上证报</span><span class="tag fade">尚未拆解</span><span class="muted">本条不会显示利好/利空判断</span></div>
+        </div>
+      </div>
+      <div class="empty-card mt-2">
+        <div class="e-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+        <div class="e-why">没有模型报告的事件，不显示方向判断——这不是缺功能，是纪律。</div>
+        <div class="e-how">选中证据后点击"生成事件拆解与影响研究"（消耗每日额度）。</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footnote">
+    <b>板块雷达</b> = 真实 MVP「板块工作台 v0.6」复刻 + C 端化（热力卡可视化、状态前置到卡片、未拆解事件明示"不表态"、额度口径可见）· 本页均为演示数据 · <b>所有内容仅为产品交互演示，不构成投资建议</b>。
+  </footer>
+</main>
+</div>
+<script src="proto.js?v=1"></script>
+</body>
+</html>
